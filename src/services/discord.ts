@@ -30,7 +30,7 @@ export class DiscordService {
 
         const activity: DiscordActivity = {
             details: track.name,
-            state: `par ${track.artist}`,
+            state: `${track.artist}`,
             type: 2,
             largeImageKey: artworkUrl || 'logo',
             largeImageText: track.album,
