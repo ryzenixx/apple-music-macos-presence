@@ -3,9 +3,11 @@
 # Configuration
 APP_NAME="com.ryzenixx.applemusicpresence"
 PLIST_PATH="$HOME/Library/LaunchAgents/$APP_NAME.plist"
-WORKING_DIR="$(pwd)"
+
+# Resolve absolute path to the project root (one level up from scripts/)
+WORKING_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 NODE_PATH="/opt/homebrew/bin/node"
-TS_NODE_PATH="$WORKING_DIR/node_modules/.bin/ts-node"
+TS_NODE_PATH="$WORKING_DIR/node_modules/ts-node/dist/bin.js"
 ENTRY_FILE="src/main.ts"
 LOG_DIR="$HOME/Library/Logs/AppleMusicPresence"
 
@@ -51,10 +53,10 @@ EOF
 chmod 644 "$PLIST_PATH"
 
 # Unload previous instance if exists
-launchctl unload "$PLIST_PATH" 2>/dev/null
+launchctl bootout gui/$(id -u) "$PLIST_PATH" 2>/dev/null
 
 # Load the new plist
-launchctl load "$PLIST_PATH"
+launchctl bootstrap gui/$(id -u) "$PLIST_PATH"
 
 echo "✅ Service installed and started!"
 echo "📄 Logs are available at: $LOG_DIR/output.log"

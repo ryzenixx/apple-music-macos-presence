@@ -6,7 +6,7 @@ PLIST_PATH="$HOME/Library/LaunchAgents/$APP_NAME.plist"
 echo "🗑️ Removing Apple Music Presence background service..."
 
 # Unload
-launchctl unload "$PLIST_PATH" 2>/dev/null
+launchctl bootout gui/$(id -u) "$PLIST_PATH" 2>/dev/null
 
 # Remove file
 rm "$PLIST_PATH" 2>/dev/null
