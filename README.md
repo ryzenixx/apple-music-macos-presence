@@ -66,7 +66,7 @@ Before you begin, ensure you have the following:
     APPLE_KEY_ID=XXXXXXXXXX
     APPLE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhki...\n-----END PRIVATE KEY-----"
     ```
-    > *Need help finding these? Check the [Apple Developer Documentation](https://developer.apple.com/documentation/musickit/keys).*
+    > *Need help finding these? Check the [Apple Developer Documentation](https://developer.apple.com/documentation/musickit).*
 
 ## 🚀 Usage
 
