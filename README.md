@@ -9,10 +9,10 @@
 **The ultimate Discord Rich Presence integration for Apple Music on macOS.**
 
 <p>
-  <a href="#features">Features</a> •
-  <a href="#prerequisites">Prerequisites</a> •
-  <a href="#installation">Installation</a> •
-  <a href="#configuration">Configuration</a>
+  <a href="#-features">Features</a> •
+  <a href="#%EF%B8%8F-prerequisites">Prerequisites</a> •
+  <a href="#%EF%B8%8F-installation">Installation</a> •
+  <a href="#%EF%B8%8F-configuration">Configuration</a>
 </p>
 
 </div>
