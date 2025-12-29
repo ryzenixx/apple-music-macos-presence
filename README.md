@@ -12,6 +12,7 @@
   <a href="#-features">Features</a> •
   <a href="#%EF%B8%8F-prerequisites">Prerequisites</a> •
   <a href="#%EF%B8%8F-installation">Installation</a> •
+  <a href="#%EF%B8%8F-background-service-auto-start">Auto-Start</a> •
   <a href="#%EF%B8%8F-configuration">Configuration</a>
 </p>
 
@@ -77,6 +78,21 @@ npm start
 ```
 
 The application will launch and immediately connect to your local Apple Music instance and Discord client.
+
+## 📦 Background Service (Auto-Start)
+
+To have the application start automatically when you log in and run in the background (hidden):
+
+1.  **Install the Service**:
+    ```bash
+    ./scripts/install-service.sh
+    ```
+    *This will create a macOS LaunchAgent and start the service immediately. The app will restart automatically if it crashes.*
+
+2.  **Uninstall the Service**:
+    ```bash
+    ./scripts/uninstall-service.sh
+    ```
 
 ## 🔧 Development
 
